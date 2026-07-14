@@ -1,243 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nudge | Privacy Policy</title>
+  <title>Nudge | Privacy Policy</title>
 
-<style>
-:root{
-    --green:#34C759;
-    --green-dark:#26A746;
-    --green-soft:#EAF9EE;
-    --bg:#F5F7F5;
-    --card:#FFFFFF;
-    --text:#1C1C1E;
-    --secondary:#6B6B6E;
-    --border:#E5E5E7;
-}
+  <meta
+    name="description"
+    content="Learn how Nudge uses Apple Health data and protects your privacy."
+  />
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+  <meta name="theme-color" content="#34C759">
 
-body{
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.7;
-}
+  <style>
+    :root {
+      --green: #34C759;
+      --green-dark: #1d9f43;
+      --green-deep: #0f6f2b;
+      --green-soft: #eaf9ee;
+      --background: #f5f7f5;
+      --surface: rgba(255, 255, 255, 0.92);
+      --surface-solid: #ffffff;
+      --text: #171917;
+      --muted: #626862;
+      --border: rgba(23, 25, 23, 0.09);
+      --shadow: 0 18px 50px rgba(20, 65, 31, 0.10);
+      --content-width: 1120px;
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+    }
 
-.hero{
-    background:linear-gradient(135deg,#34C759,#28B74B);
-    color:white;
-    padding:70px 20px;
-    text-align:center;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.hero img{
-    width:72px;
-    margin-bottom:20px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.hero h1{
-    font-size:3rem;
-    font-weight:700;
-    letter-spacing:-1px;
-}
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(
+          circle at 12% 0%,
+          rgba(52, 199, 89, 0.18),
+          transparent 30rem
+        ),
+        linear-gradient(
+          180deg,
+          #f7fbf8 0%,
+          var(--background) 100%
+        );
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
 
-.hero p{
-    margin-top:12px;
-    font-size:1.2rem;
-    opacity:.92;
-}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-.container{
-    max-width:900px;
-    margin:-50px auto 80px;
-    padding:0 20px;
-}
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 251, 248, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
 
-.card{
-    background:white;
-    border-radius:24px;
-    padding:50px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-}
+    .nav-inner {
+      width: min(calc(100% - 28px), var(--content-width));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-.section{
-    margin-bottom:36px;
-}
+    .nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.08rem;
+      font-weight: 780;
+      letter-spacing: -0.02em;
+    }
 
-.section:last-child{
-    margin-bottom:0;
-}
+    .nav-brand img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
 
-h2{
-    font-size:1.4rem;
-    margin-bottom:12px;
-    color:var(--green-dark);
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-p{
-    color:var(--secondary);
-    margin-bottom:14px;
-}
+    .nav-links a {
+      padding: 9px 13px;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 680;
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
+    }
 
-strong{
-    color:var(--text);
-}
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--green-deep);
+      background: var(--green-soft);
+      outline: none;
+    }
 
-a{
-    color:var(--green-dark);
-    text-decoration:none;
-    font-weight:600;
-}
+    .nav-links a[aria-current="page"] {
+      color: var(--green-deep);
+      background: var(--green-soft);
+    }
 
-a:hover{
-    text-decoration:underline;
-}
+    .page {
+      width: min(calc(100% - 28px), var(--content-width));
+      margin: 0 auto;
+      padding: 30px 0 72px;
+    }
 
-.footer{
-    text-align:center;
-    margin-top:40px;
-    font-size:.95rem;
-}
+    .hero {
+      padding: 68px 40px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.98),
+          rgba(238, 250, 241, 0.97)
+        );
+      box-shadow: var(--shadow);
+    }
 
-.button{
-    display:inline-block;
-    margin-top:12px;
-    background:var(--green);
-    color:white;
-    padding:14px 24px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.2s;
-}
+    .hero img {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      object-fit: contain;
+    }
 
-.button:hover{
-    background:var(--green-dark);
-    text-decoration:none;
-}
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 1;
+      letter-spacing: -0.055em;
+    }
 
-@media (max-width:700px){
+    .hero p {
+      max-width: 650px;
+      margin: 20px auto 0;
+      color: var(--muted);
+      font-size: 1.2rem;
+    }
 
-.hero{
-    padding:55px 20px;
-}
+    .card {
+      max-width: 900px;
+      margin: 28px auto 0;
+      padding: 48px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: 0 10px 30px rgba(20, 65, 31, 0.05);
+      backdrop-filter: blur(18px);
+    }
 
-.hero h1{
-    font-size:2.2rem;
-}
+    .effective-date {
+      display: inline-block;
+      margin-bottom: 34px;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green-deep);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
 
-.card{
-    padding:30px;
-}
+    .section {
+      margin-bottom: 34px;
+    }
 
-}
-</style>
+    .section:last-child {
+      margin-bottom: 0;
+    }
 
+    h2 {
+      margin: 0 0 12px;
+      color: var(--green-dark);
+      font-size: 1.45rem;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    a {
+      color: var(--green-dark);
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green-deep);
+      font-weight: 720;
+    }
+
+    .contact-link:hover {
+      text-decoration: none;
+      background: #dcf5e3;
+    }
+
+    footer {
+      padding: 34px 18px 0;
+      text-align: center;
+      color: #757b75;
+      font-size: 0.84rem;
+      line-height: 1.55;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 14px;
+    }
+
+    .footer-links a {
+      color: var(--green-dark);
+      text-decoration: none;
+      font-weight: 680;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 680px) {
+      .nav-inner {
+        min-height: 64px;
+      }
+
+      .nav-brand span {
+        display: none;
+      }
+
+      .nav-brand img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .nav-links {
+        gap: 2px;
+      }
+
+      .nav-links a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+      }
+
+      .page {
+        width: min(calc(100% - 18px), var(--content-width));
+        padding-top: 18px;
+      }
+
+      .hero {
+        padding: 48px 24px;
+        border-radius: 24px;
+      }
+
+      .hero img {
+        width: 62px;
+        height: 62px;
+      }
+
+      .card {
+        padding: 32px 24px;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #0d100e;
+        --surface: rgba(25, 29, 26, 0.92);
+        --surface-solid: #1b201c;
+        --text: #f5f7f5;
+        --muted: #b6bdb7;
+        --border: rgba(255, 255, 255, 0.09);
+        --green-soft: rgba(52, 199, 89, 0.17);
+        --shadow: 0 20px 52px rgba(0, 0, 0, 0.30);
+      }
+
+      body {
+        background:
+          radial-gradient(
+            circle at 12% 0%,
+            rgba(52, 199, 89, 0.18),
+            transparent 30rem
+          ),
+          #0d100e;
+      }
+
+      .site-nav {
+        background: rgba(13, 16, 14, 0.88);
+      }
+
+      .hero {
+        border-color: rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(
+            145deg,
+            rgba(27, 32, 28, 0.98),
+            rgba(18, 27, 20, 0.98)
+          );
+      }
+
+      .contact-link:hover {
+        background: rgba(52, 199, 89, 0.25);
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Nudge home">
+        <img src="assets/nudge-logo.png" alt="" />
+        <span>Nudge</span>
+      </a>
 
-<section class="hero">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+  </nav>
 
-<img src="assets/nudge-logo.png" alt="Nudge Logo">
+  <div class="page">
+    <section class="hero">
+      <img src="assets/nudge-logo.png" alt="Nudge footprint logo">
 
-<h1>Privacy Policy</h1>
+      <h1>Privacy Policy</h1>
 
-<p>Your privacy matters to us.</p>
+      <p>
+        Your privacy matters to us.
+      </p>
+    </section>
 
-</section>
+    <main class="card">
+      <div class="effective-date">
+        Effective Date: July 10, 2026
+      </div>
 
-<div class="container">
+      <section class="section">
+        <h2>Your Privacy</h2>
 
-<div class="card">
+        <p>
+          Nudge ("Nudge", "we", "our", or "us") respects your privacy.
+        </p>
 
-<div class="section">
+        <p>
+          Nudge is designed to help you reach your daily step goal while
+          keeping your personal data private.
+        </p>
+      </section>
 
-<p><strong>Effective Date:</strong> July 10, 2026</p>
+      <section class="section">
+        <h2>Health Data</h2>
 
-</div>
+        <p>
+          With your permission, Nudge uses Apple HealthKit step count data to
+          display your daily progress, steps remaining, estimated walking time,
+          and other coaching features.
+        </p>
 
-<div class="section">
+        <p>
+          Your HealthKit data remains on your device. Nudge does
+          <strong>not</strong> collect, store, transmit, sell, or share your
+          HealthKit data with us or any third parties.
+        </p>
+      </section>
 
-<h2>Your Privacy</h2>
+      <section class="section">
+        <h2>Advertising and Tracking</h2>
 
-<p>
-Nudge ("Nudge", "we", "our", or "us") respects your privacy.
-</p>
+        <p>
+          Nudge does not use your data for advertising, analytics, tracking,
+          profiling, or marketing purposes.
+        </p>
+      </section>
 
-<p>
-Nudge is designed to help you reach your daily step goal while keeping your personal data private.
-</p>
+      <section class="section">
+        <h2>Future Features</h2>
 
-</div>
+        <p>
+          If future versions of Nudge introduce optional cloud features or
+          services that require sharing data, this Privacy Policy will be
+          updated before those features become available.
+        </p>
+      </section>
 
-<div class="section">
+      <section class="section">
+        <h2>Contact</h2>
 
-<h2>Health Data</h2>
+        <p>
+          If you have questions about this Privacy Policy, please contact us:
+        </p>
 
-<p>
-With your permission, Nudge uses Apple HealthKit step count data to display your daily progress, steps remaining, estimated walking time, and other coaching features.
-</p>
+        <a class="contact-link" href="mailto:chris@hapalabs.com">
+          chris@hapalabs.com
+        </a>
+      </section>
+    </main>
 
-<p>
-Your HealthKit data remains on your device. Nudge does <strong>not</strong> collect, store, transmit, sell, or share your HealthKit data with us or any third parties.
-</p>
+    <footer>
+      <div>© 2026 Nudge. All rights reserved.</div>
 
-</div>
-
-<div class="section">
-
-<h2>Advertising & Tracking</h2>
-
-<p>
-Nudge does not use your data for advertising, analytics, tracking, profiling, or marketing purposes.
-</p>
-
-</div>
-
-<div class="section">
-
-<h2>Future Features</h2>
-
-<p>
-If future versions of Nudge introduce optional cloud features or services that require sharing data, this Privacy Policy will be updated before those features become available.
-</p>
-
-</div>
-
-<div class="section">
-
-<h2>Contact</h2>
-
-<p>
-If you have questions about this Privacy Policy, please contact:
-</p>
-
-<p>
-<a href="mailto:chris@hapalabs.com">chris@hapalabs.com</a>
-</p>
-
-</div>
-
-<div class="footer">
-
-<a class="button" href="index.html">
-← Back to Home
-</a>
-
-</div>
-
-</div>
-
-</div>
-
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
