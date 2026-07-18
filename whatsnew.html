@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Nudge: Your Step Coach</title>
+  <title>Nudge | What’s New</title>
+
   <meta
     name="description"
-    content="Nudge is the Apple Watch companion that turns your daily step goal into a simple countdown."
+    content="See what’s new in the latest versions of Nudge: Your Step Coach."
   />
+
   <meta name="theme-color" content="#34c759" />
+
+  <link rel="icon" type="image/png" href="assets/nudge-logo.png" />
 
   <style>
     :root {
@@ -42,8 +46,16 @@
       margin: 0;
       color: var(--text);
       background:
-        radial-gradient(circle at 12% 0%, rgba(52, 199, 89, 0.18), transparent 30rem),
-        linear-gradient(180deg, #f7fbf8 0%, var(--background) 100%);
+        radial-gradient(
+          circle at 12% 0%,
+          rgba(52, 199, 89, 0.18),
+          transparent 30rem
+        ),
+        linear-gradient(
+          180deg,
+          #f7fbf8 0%,
+          var(--background) 100%
+        );
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -61,32 +73,125 @@
       max-width: 100%;
     }
 
+    a {
+      color: inherit;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 251, 248, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      width: min(calc(100% - 28px), var(--content-width));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.08rem;
+      font-weight: 780;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-brand img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      padding: 9px 13px;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 680;
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--green-deep);
+      background: var(--green-soft);
+      outline: none;
+    }
+
+    .nav-links a[aria-current="page"] {
+      color: var(--green-deep);
+      background: var(--green-soft);
+    }
+
     .page {
       width: min(calc(100% - 28px), var(--content-width));
       margin: 0 auto;
-      padding: 18px 0 72px;
+      padding: 30px 0 72px;
     }
+    .nav-store img {
+    height: 44px;
+    width: auto;
+    transition: transform .2s ease;
+}
 
+.nav-store img:hover {
+    transform: scale(1.04);
+}
+
+@media (max-width:900px){
+
+.nav-store{
+    display:none;
+}
+
+}
     .hero {
       position: relative;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1fr auto;
       align-items: center;
-      min-height: 680px;
-      border: 1px solid rgba(255,255,255,0.75);
+      min-height: 390px;
+      padding: 64px;
+      border: 1px solid rgba(255, 255, 255, 0.75);
       border-radius: var(--radius-xl);
       background:
-        linear-gradient(145deg, rgba(255,255,255,0.98), rgba(238,250,241,0.97));
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.98),
+          rgba(238, 250, 241, 0.97)
+        );
       box-shadow: var(--shadow);
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      inset: auto -140px -180px auto;
-      width: 520px;
-      height: 520px;
+      right: -130px;
+      bottom: -190px;
+      width: 480px;
+      height: 480px;
       border-radius: 50%;
       background: rgba(52, 199, 89, 0.12);
     }
@@ -94,7 +199,7 @@
     .hero-copy {
       position: relative;
       z-index: 1;
-      padding: 72px 36px 72px 64px;
+      max-width: 760px;
     }
 
     .brand-row {
@@ -121,72 +226,30 @@
 
     h1 {
       margin: 0;
-      max-width: 720px;
-      font-size: clamp(3rem, 7vw, 6.3rem);
+      font-size: clamp(3.3rem, 8vw, 6rem);
       line-height: 0.96;
       letter-spacing: -0.06em;
     }
 
-    .accent {
-      color: var(--green);
-    }
-
     .hero-intro {
-      max-width: 690px;
-      margin-top: 30px;
+      max-width: 680px;
+      margin-top: 26px;
       color: var(--muted);
-      font-size: clamp(1.05rem, 2.1vw, 1.28rem);
+      font-size: clamp(1.08rem, 2.1vw, 1.28rem);
       line-height: 1.55;
     }
 
     .hero-intro p {
-      margin: 0 0 18px;
+      margin: 0 0 14px;
     }
 
-    .hero-intro strong {
-      color: var(--text);
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 26px;
-    }
-
-    .badge {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: var(--green-soft);
-      color: var(--green-deep);
-      font-size: 0.9rem;
-      font-weight: 750;
-    }
-
-    .hero-visual {
-      position: relative;
-      min-height: 680px;
-      display: grid;
-      place-items: end center;
-      padding: 36px 36px 0 0;
-    }
-
-    .hero-visual::before {
-      content: "";
-      position: absolute;
-      inset: 70px 28px 30px 20px;
-      border-radius: 34px;
-      background: linear-gradient(160deg, #43cc68, #2eb956);
-    }
-
-    .hero-visual img {
+    .hero-logo {
       position: relative;
       z-index: 1;
-      width: min(100%, 520px);
-      max-height: 630px;
-      object-fit: contain;
-      object-position: bottom;
-      filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.18));
+      width: 150px;
+      margin-left: 40px;
+      opacity: 0.92;
+      filter: drop-shadow(0 18px 28px rgba(20, 80, 35, 0.14));
     }
 
     main {
@@ -195,8 +258,9 @@
       margin-top: 24px;
     }
 
-    .section {
-      padding: 44px;
+    .release-card {
+      position: relative;
+      padding: 46px;
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       background: var(--surface);
@@ -204,8 +268,27 @@
       backdrop-filter: blur(18px);
     }
 
+    .release-card.latest {
+      border-color: rgba(52, 199, 89, 0.25);
+      box-shadow:
+        0 18px 45px rgba(20, 80, 35, 0.09),
+        inset 0 4px 0 var(--green);
+    }
+
+    .release-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .release-title-wrap {
+      min-width: 0;
+    }
+
     .section-label {
-      margin: 0 0 10px;
+      margin: 0 0 9px;
       color: var(--green-dark);
       font-size: 0.78rem;
       font-weight: 820;
@@ -214,185 +297,157 @@
     }
 
     h2 {
-      margin: 0 0 18px;
-      font-size: clamp(2rem, 4.2vw, 3.2rem);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
     }
 
-    p {
-      margin: 0 0 18px;
+    .release-date {
+      margin: 10px 0 0;
       color: var(--muted);
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
 
-    p:last-child {
-      margin-bottom: 0;
+    .version-badge {
+      flex: 0 0 auto;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green-deep);
+      font-size: 0.9rem;
+      font-weight: 760;
+      white-space: nowrap;
     }
 
-    .feature-grid {
+    .release-summary {
+      max-width: 780px;
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .change-groups {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      padding: 0;
-      margin: 26px 0 0;
-      list-style: none;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    .feature-grid li {
-      position: relative;
-      min-height: 84px;
-      padding: 19px 19px 19px 52px;
+    .change-group {
+      padding: 22px;
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
       background: var(--surface-solid);
-      color: var(--text);
-      font-weight: 660;
-      line-height: 1.4;
     }
 
-    .feature-grid li::before {
-      content: "✓";
-      position: absolute;
-      left: 18px;
-      top: 18px;
+    .change-group h3 {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 16px;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .change-icon {
       display: grid;
-      width: 24px;
-      height: 24px;
+      width: 30px;
+      height: 30px;
       place-items: center;
       border-radius: 50%;
       background: var(--green-soft);
       color: var(--green-dark);
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       font-weight: 900;
     }
 
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 0.95fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .media-card {
-      overflow: hidden;
-      border-radius: 26px;
-      background: #35c85d;
-      box-shadow: 0 22px 42px rgba(20, 80, 35, 0.14);
-    }
-
-    .media-card img {
-      width: 100%;
-      height: 100%;
-      max-height: 660px;
-      object-fit: contain;
-    }
-
-    .watch-showcase {
-      padding: 54px 44px;
-      color: #fff;
-      background:
-        radial-gradient(circle at 85% 10%, rgba(255,255,255,0.12), transparent 20rem),
-        linear-gradient(145deg, #0e4e20, #167b35 55%, #2ebf57);
-    }
-
-    .watch-showcase .section-label,
-    .watch-showcase h2 {
-      color: #fff;
-    }
-
-    .watch-showcase p {
-      color: rgba(255,255,255,0.82);
-    }
-
-    .steps-left {
-      display: inline-block;
-      margin: 6px 0 22px;
-      padding: 14px 18px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.11);
-      color: #fff;
-      font-size: clamp(1.55rem, 4.5vw, 2.6rem);
-      font-weight: 790;
-      letter-spacing: -0.035em;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .gallery figure {
-      margin: 0;
-      overflow: hidden;
-      border-radius: 20px;
-      background: #000;
-      box-shadow: 0 18px 34px rgba(0,0,0,0.18);
-    }
-
-    .gallery img {
-      width: 100%;
-      aspect-ratio: 0.82 / 1;
-      object-fit: cover;
-      object-position: top;
-    }
-
-    .philosophy {
-      text-align: center;
-      padding: 58px 44px;
-      background:
-        linear-gradient(145deg, #effbf2, #ffffff);
-    }
-
-    .philosophy h2 {
-      max-width: 780px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .philosophy p {
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .reminder-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    .change-group ul {
       padding: 0;
-      margin: 24px 0;
+      margin: 0;
       list-style: none;
     }
 
-    .reminder-list li {
-      padding: 10px 14px;
-      border: 1px solid rgba(52,199,89,0.24);
-      border-radius: 999px;
-      background: var(--green-soft);
-      color: var(--green-deep);
-      font-weight: 700;
+    .change-group li {
+      position: relative;
+      margin: 0 0 13px;
+      padding-left: 19px;
+      color: var(--muted);
+      line-height: 1.45;
     }
 
-    .closing {
-      text-align: center;
-      padding: 62px 44px;
+    .change-group li:last-child {
+      margin-bottom: 0;
     }
 
-    .closing p {
-      max-width: 690px;
-      margin-left: auto;
-      margin-right: auto;
+    .change-group li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.67em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
     }
 
-    .final-line {
+    .initial-release-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      padding: 0;
+      margin: 28px 0 0;
+      list-style: none;
+    }
+
+    .initial-release-grid li {
+      position: relative;
+      min-height: 78px;
+      padding: 18px 18px 18px 50px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-solid);
       color: var(--text);
-      font-size: clamp(1.35rem, 3vw, 1.85rem);
-      font-weight: 760;
-      line-height: 1.35;
+      font-weight: 650;
+      line-height: 1.4;
+    }
+
+    .initial-release-grid li::before {
+      content: "✓";
+      position: absolute;
+      left: 18px;
+      top: 17px;
+      display: grid;
+      width: 23px;
+      height: 23px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .coming-soon {
+      padding: 58px 44px;
+      text-align: center;
+      background:
+        linear-gradient(
+          145deg,
+          #effbf2,
+          #ffffff
+        );
+    }
+
+    .coming-soon h2 {
+      max-width: 760px;
+      margin: 0 auto 18px;
+    }
+
+    .coming-soon p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.08rem;
     }
 
     footer {
@@ -421,47 +476,52 @@
       text-decoration: underline;
     }
 
-
     @media (max-width: 900px) {
-      .hero,
-      .split {
+      .hero {
         grid-template-columns: 1fr;
+        padding: 52px 40px;
       }
 
-      .hero-copy {
-        padding: 54px 34px 34px;
+      .hero-logo {
+        display: none;
       }
 
-      .hero-visual {
-        min-height: 540px;
-        padding: 0 22px;
-      }
-
-      .hero-visual::before {
-        inset: 20px 18px 22px;
-      }
-
-      .hero-visual img {
-        max-height: 520px;
-      }
-
-      .gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .change-groups {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 680px) {
+      .nav-inner {
+        min-height: 64px;
+      }
+
+      .nav-brand span {
+        display: none;
+      }
+
+      .nav-brand img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .nav-links {
+        gap: 2px;
+      }
+
+      .nav-links a {
+        padding: 8px 9px;
+        font-size: 0.86rem;
+      }
+
       .page {
         width: min(calc(100% - 18px), var(--content-width));
-        padding-top: 9px;
+        padding-top: 18px;
       }
 
       .hero {
+        padding: 44px 24px;
         border-radius: 24px;
-      }
-
-      .hero-copy {
-        padding: 42px 24px 26px;
       }
 
       .brand-row img {
@@ -469,28 +529,29 @@
         height: 42px;
       }
 
-      h1 {
-        font-size: clamp(2.7rem, 14vw, 4.4rem);
-      }
-
-      .hero-visual {
-        min-height: 470px;
-      }
-
-      .section,
-      .watch-showcase,
-      .philosophy,
-      .closing {
+      .release-card,
+      .coming-soon {
         padding: 32px 24px;
       }
 
-      .feature-grid,
-      .gallery {
-        grid-template-columns: 1fr;
+      .release-header {
+        display: block;
       }
 
-      .gallery img {
-        aspect-ratio: auto;
+      .version-badge {
+        display: inline-block;
+        margin-top: 18px;
+      }
+
+      .initial-release-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav-links a {
+        padding: 8px 7px;
+        font-size: 0.8rem;
       }
     }
 
@@ -501,401 +562,246 @@
         --surface-solid: #1b201c;
         --text: #f5f7f5;
         --muted: #b6bdb7;
-        --border: rgba(255,255,255,0.09);
-        --green-soft: rgba(52,199,89,0.17);
-        --shadow: 0 20px 52px rgba(0,0,0,0.30);
+        --border: rgba(255, 255, 255, 0.09);
+        --green-soft: rgba(52, 199, 89, 0.17);
+        --shadow: 0 20px 52px rgba(0, 0, 0, 0.30);
       }
 
       body {
         background:
-          radial-gradient(circle at 12% 0%, rgba(52,199,89,0.18), transparent 30rem),
+          radial-gradient(
+            circle at 12% 0%,
+            rgba(52, 199, 89, 0.18),
+            transparent 30rem
+          ),
           #0d100e;
       }
 
-      .hero {
-        background:
-          linear-gradient(145deg, rgba(27,32,28,0.98), rgba(18,27,20,0.98));
-        border-color: rgba(255,255,255,0.08);
+      .site-nav {
+        background: rgba(13, 16, 14, 0.88);
       }
 
-      .philosophy {
+      .hero {
+        border-color: rgba(255, 255, 255, 0.08);
         background:
-          linear-gradient(145deg, rgba(22,56,30,0.9), rgba(25,29,26,0.95));
+          linear-gradient(
+            145deg,
+            rgba(27, 32, 28, 0.98),
+            rgba(18, 27, 20, 0.98)
+          );
+      }
+
+      .coming-soon {
+        background:
+          linear-gradient(
+            145deg,
+            rgba(22, 56, 30, 0.9),
+            rgba(25, 29, 26, 0.95)
+          );
       }
     }
-      .site-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid var(--border);
-    background: rgba(247, 251, 248, 0.88);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-  }
-  
-  .nav-inner {
-    width: min(calc(100% - 28px), var(--content-width));
-    min-height: 72px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
-  
-  .nav-brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--text);
-    text-decoration: none;
-    font-size: 1.08rem;
-    font-weight: 780;
-    letter-spacing: -0.02em;
-  }
-  
-  .nav-brand img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-  }
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .nav-links a {
-    padding: 9px 13px;
-    border-radius: 999px;
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 680;
-    transition:
-      color 0.2s ease,
-      background 0.2s ease;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a:focus-visible {
-    color: var(--green-deep);
-    background: var(--green-soft);
-    outline: none;
-  }
-  
-  .nav-links a[aria-current="page"] {
-    color: var(--green-deep);
-    background: var(--green-soft);
-  }
-  
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px 18px;
-    margin-top: 14px;
-  }
-  
-  .footer-links a {
-    color: var(--green-dark);
-    text-decoration: none;
-    font-weight: 680;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 680px) {
-    .nav-inner {
-      min-height: 64px;
-    }
-  
-    .nav-brand span {
-      display: none;
-    }
-  
-    .nav-brand img {
-      width: 34px;
-      height: 34px;
-    }
-  
-    .nav-links {
-      gap: 2px;
-    }
-  
-    .nav-links a {
-      padding: 8px 10px;
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    .site-nav {
-      background: rgba(13, 16, 14, 0.88);
-    }
-  }
   </style>
 </head>
 
 <body>
-   <nav class="site-nav" aria-label="Main navigation">
+  <nav class="site-nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a class="nav-brand" href="index.html" aria-label="Nudge home">
         <img src="assets/nudge-logo.png" alt="" />
         <span>Nudge</span>
       </a>
+
       <div class="nav-links">
-        <a href="index.html" aria-current="page">Home</a>
+        <a href="index.html">Home</a>
+        <a href="whatsnew.html" aria-current="page">What’s New</a>
         <a href="privacy.html">Privacy</a>
         <a href="support.html">Support</a>
       </div>
+      <div class="nav-store">
+  <a
+    href="https://apps.apple.com/us/app/nudge-your-step-coach/id6785135263"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    <img
+      src="assets/download-on-the-app-store.svg"
+      alt="Download on the App Store">
+
+  </a>
+</div>
     </div>
   </nav>
+
   <div class="page">
     <header class="hero">
       <div class="hero-copy">
         <div class="brand-row">
-          <img src="assets/nudge-logo.png" alt="Nudge footprint logo" />
+          <img
+            src="assets/nudge-logo.png"
+            alt="Nudge footprint logo"
+          />
+
           <p class="eyebrow">Nudge: Your Step Coach</p>
         </div>
 
-        <h1>
-          Apple Workouts tracks your activity.
-          <span class="accent">Nudge keeps you moving.</span>
-        </h1>
+        <h1>What’s New</h1>
 
         <div class="hero-intro">
           <p>
-            <strong>Nudge is the Apple Watch companion</strong> that turns your
-            daily step goal into a simple countdown. See exactly how many steps
-            you have left, how long they’ll take, and whether you’re on pace to
-            finish by your chosen time.
+            See what’s new, improved, and fixed in every version of Nudge.
           </p>
 
           <p>
-            Keep using Apple Workouts for your walks, runs, and workouts.
-            Nudge adds the planning, motivation, and gentle reminders that help
-            you build the habit of moving every day.
+            Helping you stay consistent, one update at a time.
           </p>
-
-          <p>
-            Built for iPhone and Apple Watch, Nudge works with Apple Health to
-            turn your daily step count into practical guidance you can use
-            throughout the day.
-          </p>
-        </div>
-
-        <div class="hero-badges">
-          <span class="badge">Apple Watch companion</span>
-          <span class="badge">Apple Health integration</span>
-          <span class="badge">Daily step coaching</span>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <img
-          src="assets/iphone-overview.png"
-          alt="Nudge iPhone app showing steps remaining and weekly history"
-        />
-      </div>
+      <img
+        class="hero-logo"
+        src="assets/nudge-logo.png"
+        alt=""
+      />
     </header>
 
     <main>
-      <section class="section">
-        <p class="section-label">Why people love Nudge</p>
-        <h2>A clearer way to reach your daily goal</h2>
-
-        <ul class="feature-grid">
-          <li>Count down the exact number of steps you have left today</li>
-          <li>See how many walking minutes remain to reach your goal</li>
-          <li>Know whether you’re ahead, behind, or on pace</li>
-          <li>Set a daily goal and a “Finish By” time that fits your schedule</li>
-          <li>Review your daily and weekly progress to build lasting habits</li>
-          <li>Estimate calories burned from your walking activity</li>
-          <li>Receive optional reminders that help you stay on track</li>
-          <li>Celebrate when you reach your daily goal</li>
-        </ul>
-      </section>
-
-      <section class="section watch-showcase">
-        <div class="split">
-          <div>
-            <p class="section-label">Designed for Apple Watch</p>
-            <h2>The number that matters most</h2>
-
-            <p>Nudge was designed around the Apple Watch experience.</p>
-
-            <p>
-              Instead of opening your watch to rings, percentages, or complicated
-              metrics, you see one clear number:
-            </p>
-
-            <div class="steps-left">Steps Left Today.</div>
-
-            <p>
-              Swipe through simple views to check your countdown, review your
-              progress, start a guided walk, or adjust your settings. Whether you
-              have 800 steps or 8,000 remaining, Nudge helps you understand
-              exactly what it will take to finish your day successfully.
-            </p>
+      <article class="release-card latest">
+        <div class="release-header">
+          <div class="release-title-wrap">
+            <p class="section-label">Latest Release</p>
+            <h2>Version 1.1</h2>
+            <p class="release-date">Released July 2026</p>
           </div>
 
-          <div class="media-card">
-            <img
-              src="assets/watch-overview.png"
-              alt="Nudge running on Apple Watch"
-            />
-          </div>
+          <span class="version-badge">Current version</span>
         </div>
 
-        <div class="gallery" aria-label="Nudge Apple Watch screens">
-          <figure>
-            <img src="assets/watch-main.png" alt="Nudge Apple Watch main countdown screen" />
-          </figure>
-          <figure>
-            <img src="assets/watch-complication.png" alt="Nudge Apple Watch complications" />
-          </figure>
-          <figure>
-            <img src="assets/watch-walk-plan.png" alt="Nudge Apple Watch walk plan screen" />
-          </figure>
-          <figure>
-            <img src="assets/watch-week.png" alt="Nudge Apple Watch weekly history screen" />
-          </figure>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="split">
-          <div>
-            <p class="section-label">Your daily walking plan</p>
-            <h2>Turn a big goal into a manageable plan</h2>
-
-            <p><strong>Big step goals can feel overwhelming.</strong></p>
-            <p><strong>Nudge breaks them into something manageable.</strong></p>
-
-            <p>
-              Based on your remaining steps, walking pace, and Finish By time,
-              Nudge estimates how much walking you still need and suggests
-              practical walk sessions to help you stay on track.
-            </p>
-
-            <p>
-              One glance tells you whether you can finish with a quick walk now
-              or whether it’s time for a catch-up walk before the day gets away
-              from you.
-            </p>
-          </div>
-
-          <div class="media-card">
-            <img
-              src="assets/watch-walk-plan.png"
-              alt="Nudge Apple Watch walk planning options"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="section philosophy">
-        <p class="section-label">The Nudge philosophy</p>
-        <h2>Consistency matters more than intensity</h2>
-
-        <p>
-          Fitness isn’t about the occasional perfect workout. It’s about
-          building the habit of moving every day.
+        <p class="release-summary">
+          Version 1.1 introduces the new Nudge identity, improves the first-time
+          experience, expands step history, and refines performance throughout
+          the iPhone and Apple Watch apps.
         </p>
 
-        <p>
-          Review your daily and weekly history to see your progress, goal
-          streaks, walking calories, and the days you reached your target.
-          Small wins add up, and Nudge helps you see that progress over time.
-        </p>
-      </section>
+        <div class="change-groups">
+          <section class="change-group">
+            <h3>
+              <span class="change-icon">+</span>
+              New
+            </h3>
 
-      <section class="section">
-        <div class="split">
-          <div>
-            <p class="section-label">Optional reminders</p>
-            <h2>Helpful nudges, on your terms</h2>
-
-            <p>
-              Stay on track with helpful reminders throughout the day, including:
-            </p>
-
-            <ul class="reminder-list">
-              <li>Morning briefings</li>
-              <li>Progress updates</li>
-              <li>Walk suggestions</li>
-              <li>Goal celebrations</li>
+            <ul>
+              <li>New Nudge name, branding, and visual identity</li>
+              <li>Welcome experience for first-time users</li>
+              <li>Expanded daily and weekly step history</li>
+              <li>Additional historical data collection for future insights</li>
             </ul>
+          </section>
 
-            <p>
-              You’re always in control. Adjust reminder frequency, walking pace,
-              Finish By time, and daily goals to match your routine.
-            </p>
-          </div>
+          <section class="change-group">
+            <h3>
+              <span class="change-icon">↑</span>
+              Improved
+            </h3>
 
-          <div>
-            <p class="section-label">Apple Watch complications</p>
-            <h2>Your progress at a glance</h2>
+            <ul>
+              <li>Refined Apple Watch complication experience</li>
+              <li>Improved navigation and usability</li>
+              <li>More reliable Apple Health step updates</li>
+              <li>Refined countdown and walking-time calculations</li>
+            </ul>
+          </section>
 
-            <p>Keep your progress visible throughout the day.</p>
+          <section class="change-group">
+            <h3>
+              <span class="change-icon">✓</span>
+              Fixed
+            </h3>
 
-            <p>
-              Add Nudge complications to your favorite Apple Watch face and see
-              your remaining steps, progress, or countdown with a quick glance,
-              without opening the app.
-            </p>
-
-            <div class="media-card">
-              <img
-                src="assets/watch-complication.png"
-                alt="Apple Watch face with Nudge complications"
-              />
-            </div>
-          </div>
+            <ul>
+              <li>Improved synchronization between iPhone and Apple Watch</li>
+              <li>Improved reliability when refreshing step counts</li>
+              <li>Performance and responsiveness improvements</li>
+              <li>General bug fixes and interface refinements</li>
+            </ul>
+          </section>
         </div>
-      </section>
+      </article>
 
-      <section class="section closing">
-        <p class="section-label">One walk at a time</p>
-        <h2>Build a habit that lasts</h2>
+      <article class="release-card">
+        <div class="release-header">
+          <div class="release-title-wrap">
+            <p class="section-label">Previous Release</p>
+            <h2>Version 1.0</h2>
+            <p class="release-date">Released June 2026</p>
+          </div>
 
-        <p>
-          Whether your goal is 3,000 steps or 10,000, Nudge makes daily movement
-          simple, visible, and achievable.
+          <span class="version-badge">Initial release</span>
+        </div>
+
+        <p class="release-summary">
+          The first public release of Nudge introduced a simpler way to
+          understand what remains between you and your daily step goal.
         </p>
 
-        <p class="final-line">
-          Know exactly what’s left, take the next step, and build a habit that lasts.
+        <ul class="initial-release-grid">
+          <li>Daily step countdown</li>
+          <li>Apple Watch companion app</li>
+          <li>Finish By daily planning</li>
+          <li>Walking-time estimates</li>
+          <li>Ahead, behind, and on-pace guidance</li>
+          <li>Apple Health integration</li>
+          <li>Apple Watch complications</li>
+          <li>Daily and weekly history</li>
+          <li>Step-based walking plans</li>
+          <li>Indoor and outdoor walk options</li>
+          <li>Optional progress reminders</li>
+          <li>Daily goal celebrations</li>
+        </ul>
+      </article>
+
+      <section class="release-card coming-soon">
+        <p class="section-label">Looking Ahead</p>
+
+        <h2>We’re just getting started.</h2>
+
+        <p>
+          Future versions of Nudge will continue expanding coaching,
+          personalization, and insights while keeping daily movement simple,
+          visible, and achievable.
         </p>
       </section>
     </main>
 
     <footer>
-  <div>
-    Nudge uses Apple Health, with your permission, to read step data.
-    Calorie estimates and step recommendations are provided for general
-    wellness purposes only and are not intended as medical advice.
-  </div>
       <div>© 2026 Nudge. All rights reserved.</div>
+      <section class="download-section">
 
+    <h2>Ready to get moving?</h2>
+
+    <p>
+        Download Nudge today and start building a daily movement habit.
+    </p>
+
+    <a
+      href="https://apps.apple.com/us/app/nudge-your-step-coach/id6785135263"
+      target="_blank"
+      rel="noopener noreferrer">
+
+        <img
+          class="app-store-badge"
+          src="assets/download-on-the-app-store.svg"
+          alt="Download on the App Store">
+
+    </a>
+
+</section>
       <div class="footer-links">
-
         <a href="index.html">Home</a>
-
+        <a href="whatsnew.html">What’s New</a>
         <a href="privacy.html">Privacy Policy</a>
-
         <a href="support.html">Support</a>
-
       </div>
-
     </footer>
-
   </div>
-
 </body>
-
 </html>
