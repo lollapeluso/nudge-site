@@ -1,123 +1,316 @@
-<html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Nudge: Your Step Coach</title>
 
-  <meta name="description" content="Nudge is the Apple Watch companion that turns your daily step goal into a simple countdown.">
+  <meta
+    name="description"
+    content="Nudge is the Apple Watch companion that turns your daily step goal into a simple countdown."
+  />
 
-  <meta name="theme-color" content="#34c759">
+  <meta name="theme-color" content="#34c759" />
 
-  <link rel="icon" type="image/png" href="assets/nudge-logo.png">
-  <link rel="stylesheet" href="assets/site.css">
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/nudge-logo.png"
+  />
+
+  <link
+    rel="stylesheet"
+    href="assets/site.css"
+  />
 </head>
 
-<body data-page="home">
-  <div id="site-header"></div>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a
+        class="nav-brand"
+        href="index.html"
+        aria-label="Nudge home"
+      >
+        <img
+          src="assets/nudge-logo.png"
+          alt=""
+        />
+
+        <span>Nudge</span>
+      </a>
+
+      <div class="nav-desktop">
+        <div class="nav-links">
+          <a
+            href="index.html"
+            aria-current="page"
+          >
+            Home
+          </a>
+
+          <a href="whatsnew.html">
+            What’s New
+          </a>
+
+          <a href="privacy.html">
+            Privacy
+          </a>
+
+          <a href="support.html">
+            Support
+          </a>
+        </div>
+
+        <a
+          class="nav-store"
+          href="https://apps.apple.com/us/app/nudge-your-step-coach/id6785135263"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Nudge on the App Store"
+        >
+          <img
+            src="assets/download-on-the-app-store.svg"
+            alt="Download on the App Store"
+          />
+        </a>
+      </div>
+
+      <div class="nav-mobile-actions">
+        <a
+          class="nav-store-mobile"
+          href="https://apps.apple.com/us/app/nudge-your-step-coach/id6785135263"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Nudge on the App Store"
+        >
+          <img
+            src="assets/download-on-the-app-store.svg"
+            alt="Download on the App Store"
+          />
+        </a>
+
+        <button
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+    >
+      <a
+        href="index.html"
+        aria-current="page"
+      >
+        Home
+      </a>
+
+      <a href="whatsnew.html">
+        What’s New
+      </a>
+
+      <a href="privacy.html">
+        Privacy
+      </a>
+
+      <a href="support.html">
+        Support
+      </a>
+    </div>
+  </nav>
 
   <div class="page">
     <header class="hero">
       <div class="hero-copy">
         <div class="brand-row">
-          <img src="assets/nudge-logo.png" alt="Nudge footprint logo">
-          <p class="eyebrow">Nudge: Your Step Coach</p>
+          <img
+            src="assets/nudge-logo.png"
+            alt="Nudge footprint logo"
+          />
+
+          <p class="eyebrow">
+            Nudge: Your Step Coach
+          </p>
         </div>
 
         <h1>
           Apple Workouts tracks your activity.
-          <span class="accent">Nudge keeps you moving.</span>
+          <span class="accent">
+            Nudge keeps you moving.
+          </span>
         </h1>
 
         <div class="hero-intro">
           <p>
-            <strong>Nudge is the Apple Watch companion</strong> that turns your
-            daily step goal into a simple countdown. See exactly how many steps
-            you have left, how long they’ll take, and whether you’re on pace to
-            finish by your chosen time.
+            <strong>Nudge is the Apple Watch companion</strong>
+            that turns your daily step goal into a simple countdown.
+            See exactly how many steps you have left, how long they’ll
+            take, and whether you’re on pace to finish by your chosen time.
           </p>
 
           <p>
             Keep using Apple Workouts for your walks, runs, and workouts.
-            Nudge adds the planning, motivation, and gentle reminders that help
-            you build the habit of moving every day.
+            Nudge adds the planning, motivation, and gentle reminders that
+            help you build the habit of moving every day.
           </p>
 
           <p>
-            Built for iPhone and Apple Watch, Nudge works with Apple Health to
-            turn your daily step count into practical guidance you can use
-            throughout the day.
+            Built for iPhone and Apple Watch, Nudge works with Apple Health
+            to turn your daily step count into practical guidance you can
+            use throughout the day.
           </p>
         </div>
 
         <div class="hero-badges">
-          <span class="badge">Apple Watch companion</span>
-          <span class="badge">Apple Health integration</span>
-          <span class="badge">Daily step coaching</span>
+          <span class="badge">
+            Apple Watch companion
+          </span>
+
+          <span class="badge">
+            Apple Health integration
+          </span>
+
+          <span class="badge">
+            Daily step coaching
+          </span>
         </div>
       </div>
 
       <div class="hero-visual">
-        <img src="assets/iphone-overview.png" alt="Nudge iPhone app showing steps remaining and weekly history">
+        <img
+          src="assets/iphone-overview.png"
+          alt="Nudge iPhone app showing steps remaining and weekly history"
+        />
       </div>
     </header>
 
     <main>
       <section class="section">
-        <p class="section-label">Why people love Nudge</p>
-        <h2>A clearer way to reach your daily goal</h2>
+        <p class="section-label">
+          Why people love Nudge
+        </p>
+
+        <h2>
+          A clearer way to reach your daily goal
+        </h2>
 
         <ul class="feature-grid">
-          <li>Count down the exact number of steps you have left today</li>
-          <li>See how many walking minutes remain to reach your goal</li>
-          <li>Know whether you’re ahead, behind, or on pace</li>
-          <li>Set a daily goal and a “Finish By” time that fits your schedule</li>
-          <li>Review your daily and weekly progress to build lasting habits</li>
-          <li>Estimate calories burned from your walking activity</li>
-          <li>Receive optional reminders that help you stay on track</li>
-          <li>Celebrate when you reach your daily goal</li>
+          <li>
+            Count down the exact number of steps you have left today
+          </li>
+
+          <li>
+            See how many walking minutes remain to reach your goal
+          </li>
+
+          <li>
+            Know whether you’re ahead, behind, or on pace
+          </li>
+
+          <li>
+            Set a daily goal and a “Finish By” time that fits your schedule
+          </li>
+
+          <li>
+            Review your daily and weekly progress to build lasting habits
+          </li>
+
+          <li>
+            Estimate calories burned from your walking activity
+          </li>
+
+          <li>
+            Receive optional reminders that help you stay on track
+          </li>
+
+          <li>
+            Celebrate when you reach your daily goal
+          </li>
         </ul>
       </section>
 
       <section class="section watch-showcase">
         <div class="split">
           <div>
-            <p class="section-label">Designed for Apple Watch</p>
-            <h2>The number that matters most</h2>
-
-            <p>Nudge was designed around the Apple Watch experience.</p>
-
-            <p>
-              Instead of opening your watch to rings, percentages, or complicated
-              metrics, you see one clear number:
+            <p class="section-label">
+              Designed for Apple Watch
             </p>
 
-            <div class="steps-left">Steps Left Today.</div>
+            <h2>
+              The number that matters most
+            </h2>
 
             <p>
-              Swipe through simple views to check your countdown, review your
-              progress, start a guided walk, or adjust your settings. Whether you
-              have 800 steps or 8,000 remaining, Nudge helps you understand
-              exactly what it will take to finish your day successfully.
+              Nudge was designed around the Apple Watch experience.
+            </p>
+
+            <p>
+              Instead of opening your watch to rings, percentages, or
+              complicated metrics, you see one clear number:
+            </p>
+
+            <div class="steps-left">
+              Steps Left Today.
+            </div>
+
+            <p>
+              Swipe through simple views to check your countdown, review
+              your progress, start a guided walk, or adjust your settings.
+              Whether you have 800 steps or 8,000 remaining, Nudge helps
+              you understand exactly what it will take to finish your day
+              successfully.
             </p>
           </div>
 
           <div class="media-card">
-            <img src="assets/watch-overview.png" alt="Nudge running on Apple Watch">
+            <img
+              src="assets/watch-overview.png"
+              alt="Nudge running on Apple Watch"
+            />
           </div>
         </div>
 
-        <div class="gallery" aria-label="Nudge Apple Watch screens">
+        <div
+          class="gallery"
+          aria-label="Nudge Apple Watch screens"
+        >
           <figure>
-            <img src="assets/watch-main.png" alt="Nudge Apple Watch main countdown screen">
+            <img
+              src="assets/watch-main.png"
+              alt="Nudge Apple Watch main countdown screen"
+            />
           </figure>
+
           <figure>
-            <img src="assets/watch-complication.png" alt="Nudge Apple Watch complications">
+            <img
+              src="assets/watch-complication.png"
+              alt="Nudge Apple Watch complications"
+            />
           </figure>
+
           <figure>
-            <img src="assets/watch-walk-plan.png" alt="Nudge Apple Watch walk plan screen">
+            <img
+              src="assets/watch-walk-plan.png"
+              alt="Nudge Apple Watch walk plan screen"
+            />
           </figure>
+
           <figure>
-            <img src="assets/watch-week.png" alt="Nudge Apple Watch weekly history screen">
+            <img
+              src="assets/watch-week.png"
+              alt="Nudge Apple Watch weekly history screen"
+            />
           </figure>
         </div>
       </section>
@@ -125,34 +318,56 @@
       <section class="section">
         <div class="split">
           <div>
-            <p class="section-label">Your daily walking plan</p>
-            <h2>Turn a big goal into a manageable plan</h2>
+            <p class="section-label">
+              Your daily walking plan
+            </p>
 
-            <p><strong>Big step goals can feel overwhelming.</strong></p>
-            <p><strong>Nudge breaks them into something manageable.</strong></p>
+            <h2>
+              Turn a big goal into a manageable plan
+            </h2>
 
             <p>
-              Based on your remaining steps, walking pace, and Finish By time,
-              Nudge estimates how much walking you still need and suggests
-              practical walk sessions to help you stay on track.
+              <strong>
+                Big step goals can feel overwhelming.
+              </strong>
             </p>
 
             <p>
-              One glance tells you whether you can finish with a quick walk now
-              or whether it’s time for a catch-up walk before the day gets away
-              from you.
+              <strong>
+                Nudge breaks them into something manageable.
+              </strong>
+            </p>
+
+            <p>
+              Based on your remaining steps, walking pace, and Finish By
+              time, Nudge estimates how much walking you still need and
+              suggests practical walk sessions to help you stay on track.
+            </p>
+
+            <p>
+              One glance tells you whether you can finish with a quick walk
+              now or whether it’s time for a catch-up walk before the day
+              gets away from you.
             </p>
           </div>
 
           <div class="media-card">
-            <img src="assets/watch-walk-plan.png" alt="Nudge Apple Watch walk planning options">
+            <img
+              src="assets/watch-walk-plan.png"
+              alt="Nudge Apple Watch walk planning options"
+            />
           </div>
         </div>
       </section>
 
       <section class="section philosophy">
-        <p class="section-label">The Nudge philosophy</p>
-        <h2>Consistency matters more than intensity</h2>
+        <p class="section-label">
+          The Nudge philosophy
+        </p>
+
+        <h2>
+          Consistency matters more than intensity
+        </h2>
 
         <p>
           Fitness isn’t about the occasional perfect workout. It’s about
@@ -169,11 +384,17 @@
       <section class="section">
         <div class="split">
           <div>
-            <p class="section-label">Optional reminders</p>
-            <h2>Helpful nudges, on your terms</h2>
+            <p class="section-label">
+              Optional reminders
+            </p>
+
+            <h2>
+              Helpful nudges, on your terms
+            </h2>
 
             <p>
-              Stay on track with helpful reminders throughout the day, including:
+              Stay on track with helpful reminders throughout the day,
+              including:
             </p>
 
             <ul class="reminder-list">
@@ -184,67 +405,161 @@
             </ul>
 
             <p>
-              You’re always in control. Adjust reminder frequency, walking pace,
-              Finish By time, and daily goals to match your routine.
+              You’re always in control. Adjust reminder frequency, walking
+              pace, Finish By time, and daily goals to match your routine.
             </p>
           </div>
 
           <div>
-            <p class="section-label">Apple Watch complications</p>
-            <h2>Your progress at a glance</h2>
+            <p class="section-label">
+              Apple Watch complications
+            </p>
 
-            <p>Keep your progress visible throughout the day.</p>
+            <h2>
+              Your progress at a glance
+            </h2>
 
             <p>
-              Add Nudge complications to your favorite Apple Watch face and see
-              your remaining steps, progress, or countdown with a quick glance,
-              without opening the app.
+              Keep your progress visible throughout the day.
+            </p>
+
+            <p>
+              Add Nudge complications to your favorite Apple Watch face
+              and see your remaining steps, progress, or countdown with a
+              quick glance, without opening the app.
             </p>
 
             <div class="media-card">
-              <img src="assets/watch-complication.png" alt="Apple Watch face with Nudge complications">
+              <img
+                src="assets/watch-complication.png"
+                alt="Apple Watch face with Nudge complications"
+              />
             </div>
           </div>
         </div>
       </section>
 
       <section class="section closing">
-        <p class="section-label">One walk at a time</p>
-        <h2>Build a habit that lasts</h2>
+        <p class="section-label">
+          One walk at a time
+        </p>
+
+        <h2>
+          Build a habit that lasts
+        </h2>
 
         <p>
-          Whether your goal is 3,000 steps or 10,000, Nudge makes daily movement
-          simple, visible, and achievable.
+          Whether your goal is 3,000 steps or 10,000, Nudge makes daily
+          movement simple, visible, and achievable.
         </p>
 
         <p class="final-line">
-          Know exactly what’s left, take the next step, and build a habit that lasts.
+          Know exactly what’s left, take the next step, and build a habit
+          that lasts.
         </p>
       </section>
 
       <section class="download-section">
-        <h2>Ready to get moving?</h2>
+        <h2>
+          Ready to get moving?
+        </h2>
 
         <p>
           Download Nudge today and start building a daily movement habit.
         </p>
 
-        <a href="https://apps.apple.com/us/app/nudge-your-step-coach/id6785135263" target="_blank" rel="noopener noreferrer">
-          <img class="app-store-badge" src="assets/download-on-the-app-store.svg" alt="Download on the App Store">
+        <a
+          href="https://apps.apple.com/us/app/nudge-your-step-coach/id6785135263"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Nudge on the App Store"
+        >
+          <img
+            class="app-store-badge"
+            src="assets/download-on-the-app-store.svg"
+            alt="Download on the App Store"
+          />
         </a>
       </section>
     </main>
 
-    <div class="site-footer">
-      Nudge uses Apple Health, with your permission, to read step data.
-      Calorie estimates and step recommendations are provided for general
-      wellness purposes only and are not intended as medical advice.
-    </div>
+    <footer class="site-footer">
+      <div>
+        Nudge uses Apple Health, with your permission, to read step data.
+        Calorie estimates and step recommendations are provided for general
+        wellness purposes only and are not intended as medical advice.
+      </div>
 
-    <div id="site-footer"></div>
+      <div>
+        © 2026 Nudge. All rights reserved.
+      </div>
+
+      <div class="footer-links">
+        <a
+          href="index.html"
+          aria-current="page"
+        >
+          Home
+        </a>
+
+        <a href="whatsnew.html">
+          What’s New
+        </a>
+
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+
+        <a href="support.html">
+          Support
+        </a>
+      </div>
+    </footer>
   </div>
 
-  <script src="assets/site.js"></script>
+  <script>
+    const menuButton = document.querySelector(".menu-button");
+    const mobileMenu = document.querySelector(".mobile-menu");
 
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener("click", () => {
+        const isOpen =
+          menuButton.getAttribute("aria-expanded") === "true";
 
-</body></html>
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(!isOpen)
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Open navigation menu"
+            : "Close navigation menu"
+        );
+
+        mobileMenu.classList.toggle(
+          "open",
+          !isOpen
+        );
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuButton.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+          mobileMenu.classList.remove("open");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
