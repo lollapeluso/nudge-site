@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Nudge: Your Step Coach | Apple Watch Step Goal & Walking Companion</title>
+  <title>Nudge: Your Step Coach | Apple Watch Step Goal Companion</title>
 
   <meta
     name="description"
-    content="Nudge is an Apple Watch step goal companion with daily step countdowns, walking-time estimates, optional reminders, walk recommendations, and Apple Health integration."
+    content="Reach your daily step goal with Nudge, the Apple Watch companion that shows your remaining steps, walking time, pace, reminders, and practical walk recommendations."
   />
 
   <meta
     name="keywords"
-    content="Apple Watch step tracker, daily step goal, walking reminders, step countdown, Apple Health steps, walking companion, 10000 steps, Apple Watch complications, walking motivation"
+    content="Apple Watch step goal, Apple Watch step tracker, daily step goal, walking reminders, step countdown, Apple Health steps, 10000 steps, walking motivation, Apple Watch complications"
   />
 
   <meta name="author" content="Nudge" />
@@ -55,7 +55,7 @@
 
   <meta
     property="og:description"
-    content="Turn your remaining steps into a simple daily plan with Apple Watch countdowns, walking-time estimates, optional reminders, and smarter walk recommendations."
+    content="Your Apple Watch already counts your steps. Nudge tells you what to do next."
   />
 
   <meta
@@ -70,7 +70,7 @@
 
   <meta
     property="og:image:alt"
-    content="Nudge iPhone and Apple Watch step goal companion"
+    content="Nudge step goal companion for iPhone and Apple Watch"
   />
 
   <!-- X / Twitter -->
@@ -105,7 +105,7 @@
         "@type": "SoftwareApplication",
         "name": "Nudge: Your Step Coach",
         "alternateName": "Nudge",
-        "description": "An Apple Watch and iPhone companion that helps users reach their daily step goal with step countdowns, walking-time estimates, optional reminders, walk recommendations, progress guidance, and Apple Health integration.",
+        "description": "An Apple Watch and iPhone companion that helps users reach a daily step goal with remaining-step countdowns, walking-time estimates, optional reminders, walk recommendations, progress guidance, and Apple Health integration.",
         "applicationCategory": "HealthApplication",
         "applicationSubCategory": "FitnessApplication",
         "operatingSystem": "iOS 17 or later; watchOS 10 or later",
@@ -125,10 +125,10 @@
         },
         "featureList": [
           "Daily step countdown",
+          "Remaining-step display",
           "Walking-time estimates",
           "Finish By daily planning",
-          "Optional walking reminders",
-          "Daily Nudge notifications",
+          "Optional Daily Nudges",
           "Walk recommendations",
           "Apple Watch complications",
           "Daily and weekly step history",
@@ -148,7 +148,7 @@
             "name": "What is Nudge?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Nudge is an Apple Watch and iPhone companion that turns your remaining daily steps into a simple countdown, walking-time estimate, and practical plan."
+              "text": "Nudge is an Apple Watch and iPhone companion that turns your remaining daily steps into a countdown, walking-time estimate, and practical plan."
             }
           },
           {
@@ -156,7 +156,7 @@
             "name": "Does Nudge replace Apple Workouts?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Apple Workouts records individual walks, runs, and workouts. Nudge complements Apple Workouts by helping you understand what remains between you and your daily step goal."
+              "text": "No. Apple Workouts records individual workouts. Nudge complements Apple Workouts by helping you understand what remains between you and your daily step goal."
             }
           },
           {
@@ -164,7 +164,7 @@
             "name": "Does Nudge work with Apple Health?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. With your permission, Nudge reads step data from Apple Health to calculate your daily progress, remaining steps, walking-time estimates, and coaching guidance."
+              "text": "Yes. With permission, Nudge reads step data from Apple Health to calculate progress, remaining steps, walking-time estimates, and coaching guidance."
             }
           },
           {
@@ -172,15 +172,15 @@
             "name": "Can Nudge help me reach 10,000 steps?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. You can set a daily goal such as 10,000 steps, or choose another target that fits your routine. Nudge shows how many steps and walking minutes remain."
+              "text": "Yes. You can choose a 10,000-step goal or another target. Nudge shows how many steps and walking minutes remain."
             }
           },
           {
             "@type": "Question",
-            "name": "Can I customize Nudge notifications?",
+            "name": "Can I customize notifications?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Nudge includes optional Daily Nudges, progress reminders, walk recommendations, and goal celebrations that can be adjusted to fit your routine."
+              "text": "Yes. Nudge includes optional Daily Nudges, progress reminders, walk recommendations, and goal celebrations."
             }
           },
           {
@@ -188,7 +188,7 @@
             "name": "Which versions of iOS and watchOS does Nudge support?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Nudge supports iPhones running iOS 17 or later and Apple Watches running watchOS 10 or later."
+              "text": "Nudge supports compatible iPhones running iOS 17 or later and compatible Apple Watches running watchOS 10 or later."
             }
           }
         ]
@@ -489,7 +489,7 @@
       position: relative;
       overflow: hidden;
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
       align-items: center;
       gap: 42px;
       min-height: 650px;
@@ -563,11 +563,25 @@
       line-height: 1.56;
     }
 
+    .hero-proof {
+      margin-top: 26px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--green);
+      border-radius: 0 14px 14px 0;
+      background: rgba(52, 199, 89, 0.08);
+    }
+
+    .hero-proof p {
+      margin: 0;
+      color: var(--text);
+      font-weight: 720;
+    }
+
     .hero-badges {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 27px;
+      margin-top: 25px;
     }
 
     .badge {
@@ -614,7 +628,46 @@
       filter: drop-shadow(0 26px 38px rgba(20, 80, 35, 0.16));
     }
 
-    /* Feature areas */
+    /* Benefits */
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .benefit-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-solid);
+    }
+
+    .benefit-card p {
+      margin-bottom: 0;
+    }
+
+    /* Questions */
+
+    .question-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .question-card {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-solid);
+      color: var(--text);
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    /* Screens and features */
 
     .feature-grid {
       display: grid;
@@ -838,6 +891,12 @@
 
     /* Responsive */
 
+    @media (max-width: 980px) {
+      .benefit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
@@ -902,7 +961,9 @@
 
       .feature-grid,
       .comparison-grid,
-      .gallery {
+      .gallery,
+      .benefit-grid,
+      .question-grid {
         grid-template-columns: 1fr;
       }
 
@@ -973,6 +1034,8 @@
         background: rgba(25, 29, 26, 0.92);
       }
 
+      .benefit-card,
+      .question-card,
       .feature-grid li,
       .media-card,
       .gallery figure,
@@ -1116,35 +1179,41 @@
         </div>
 
         <h1>
-          Reach your daily step goal with
-          <span class="accent">Apple Watch.</span>
+          Never wonder how many
+          <span class="accent">steps you have left.</span>
         </h1>
 
         <div class="hero-intro">
           <p>
-            <strong>Nudge is an Apple Watch step goal companion</strong>
-            that turns your remaining steps into a simple countdown,
-            walking-time estimate, and practical plan for the rest of your day.
+            Nudge turns your remaining daily steps into a simple plan, so you
+            always know how far you have left to go, how long it may take, and
+            whether you’re on pace to finish.
           </p>
 
           <p>
-            Apple Workouts records your activity. Nudge helps you understand
-            what’s left, when to move, and how much walking it may take to
-            finish your daily goal.
+            Built for Apple Watch and iPhone, Nudge adds the guidance,
+            reminders, and motivation that help turn a step goal into a habit.
+          </p>
+        </div>
+
+        <div class="hero-proof">
+          <p>
+            Your Apple Watch already counts your steps. Nudge tells you what
+            to do next.
           </p>
         </div>
 
         <div class="hero-badges">
           <span class="badge">
-            Apple Watch companion
+            Remaining-step countdown
           </span>
 
           <span class="badge">
-            Apple Health integration
+            Walking-time estimates
           </span>
 
           <span class="badge">
-            Optional walking reminders
+            Optional Daily Nudges
           </span>
         </div>
 
@@ -1164,9 +1233,9 @@
 
           <a
             class="text-link"
-            href="#how-nudge-works"
+            href="#why-nudge"
           >
-            See how Nudge works
+            See why Nudge is different
           </a>
         </div>
       </div>
@@ -1174,7 +1243,7 @@
       <div class="hero-visual">
         <img
           src="assets/iphone-overview.png"
-          alt="Nudge iPhone app showing remaining daily steps, walking time, progress, and weekly history"
+          alt="Nudge iPhone app showing remaining steps, walking time, daily progress, and weekly history"
         />
       </div>
     </header>
@@ -1182,62 +1251,127 @@
     <main>
       <section
         class="section"
-        id="how-nudge-works"
+        id="why-nudge"
       >
         <p class="section-label">
-          Apple Watch step goal companion
+          Why Nudge?
         </p>
 
         <h2>
-          Turn your daily step goal into a clear, achievable plan
+          Stop guessing. Know exactly what it will take to finish your day.
         </h2>
 
         <p>
-          A daily goal can feel abstract when all you see is a total step
-          count. Nudge focuses on the information you can act on: how many
-          steps remain, approximately how many walking minutes that represents,
-          and whether you’re ahead, behind, or on pace to finish.
+          Seeing that you have completed 7,100 steps is useful. But it does
+          not answer the questions that matter when you are trying to reach
+          your goal.
         </p>
+
+        <div class="question-grid">
+          <div class="question-card">
+            How many steps do I actually have left?
+          </div>
+
+          <div class="question-card">
+            How much walking time will that take?
+          </div>
+
+          <div class="question-card">
+            Am I ahead, behind, or on pace?
+          </div>
+
+          <div class="question-card">
+            Should I walk now or can it wait?
+          </div>
+        </div>
 
         <p>
-          Set a daily step goal and choose a Finish By time. Nudge uses your
-          Apple Health step data and walking pace to make the rest of your day
-          easier to understand.
+          Nudge answers those questions at a glance. It turns your Apple
+          Health step count into guidance you can use throughout the day.
+        </p>
+      </section>
+
+      <section class="section">
+        <p class="section-label">
+          Why people download Nudge
         </p>
 
-        <ul class="feature-grid">
-          <li>
-            See the exact number of steps remaining in your daily goal
-          </li>
+        <h2>
+          A daily step goal feels easier when the next step is clear
+        </h2>
 
-          <li>
-            Estimate how many walking minutes you still need
-          </li>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <h3>Stay motivated</h3>
 
-          <li>
-            Know whether you’re ahead, behind, or on pace
-          </li>
+            <p>
+              See exactly how much progress remains instead of staring at a
+              number with no clear plan.
+            </p>
+          </article>
 
-          <li>
-            Choose a Finish By time that fits your daily schedule
-          </li>
+          <article class="benefit-card">
+            <h3>Build consistency</h3>
 
-          <li>
-            Receive optional Daily Nudges and walking reminders
-          </li>
+            <p>
+              Turn movement into a repeatable daily habit rather than relying
+              on occasional intense workouts.
+            </p>
+          </article>
 
-          <li>
-            Get practical walk recommendations based on your remaining steps
-          </li>
+          <article class="benefit-card">
+            <h3>Save time</h3>
 
-          <li>
-            Review daily and weekly step history
-          </li>
+            <p>
+              Know whether a quick walk is enough or whether you need a longer
+              catch-up session.
+            </p>
+          </article>
 
-          <li>
-            Celebrate when you complete your daily walking goal
-          </li>
-        </ul>
+          <article class="benefit-card">
+            <h3>Stay accountable</h3>
+
+            <p>
+              Optional reminders and progress guidance help keep your goal from
+              slipping away as the day gets busier.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label">
+          Nudge and Apple Workouts
+        </p>
+
+        <h2>
+          Apple Workouts records your activity. Nudge helps you finish your goal.
+        </h2>
+
+        <p>
+          Nudge is designed to complement Apple Workouts, not replace it.
+          Each app answers a different question.
+        </p>
+
+        <div class="comparison-grid">
+          <article class="comparison-card">
+            <h3>Apple Workouts</h3>
+
+            <p>
+              Records walks, runs, hikes, and workouts, including duration,
+              heart rate, pace, routes, and exercise data.
+            </p>
+          </article>
+
+          <article class="comparison-card highlight">
+            <h3>Nudge</h3>
+
+            <p>
+              Shows what remains between you and your daily step goal, then
+              helps you decide what to do next.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section class="section">
@@ -1252,10 +1386,9 @@
             </h2>
 
             <p>
-              Nudge was designed around quick, useful information on your
-              wrist. Instead of searching through charts or complicated
-              fitness metrics, you can open Nudge and immediately see what
-              remains between you and your daily step goal.
+              Nudge is built around fast, useful information on your wrist.
+              Open the app and immediately see your remaining steps, estimated
+              walking time, and daily pace.
             </p>
 
             <div class="steps-left">
@@ -1264,16 +1397,14 @@
 
             <p>
               Whether you have 800 steps or 8,000 steps remaining, Nudge helps
-              translate the number into something practical. Check your
-              progress, review a walk recommendation, or start a timed indoor
-              or outdoor walking session directly from Apple Watch.
+              translate that number into something practical.
             </p>
           </div>
 
           <div class="media-card">
             <img
               src="assets/watch-overview.png"
-              alt="Nudge Apple Watch app showing a daily step countdown and progress information"
+              alt="Nudge Apple Watch app showing remaining daily steps and progress"
             />
           </div>
         </div>
@@ -1316,35 +1447,34 @@
         <div class="split">
           <div>
             <p class="section-label">
-              Walking reminders and recommendations
+              A plan you can act on
             </p>
 
             <h2>
-              Helpful nudges that fit your routine
+              Turn remaining steps into a practical walk
             </h2>
 
             <p>
-              Nudge offers optional notifications designed to help you act
-              before your daily goal gets out of reach.
+              Nudge estimates how much walking time remains based on your
+              current progress and walking pace.
             </p>
 
             <p>
-              Choose from multiple Daily Nudge times, progress updates,
-              goal celebrations, and walk suggestions. Improved walk
-              recommendations help translate your remaining steps into a
-              practical walking duration.
+              Walk recommendations help you decide whether you need a quick
+              walk, a longer session, or just a little more movement later in
+              the day.
             </p>
 
             <p>
-              You remain in control. Adjust your daily goal, Finish By time,
-              walking pace, and notification options to match your schedule.
+              Choose indoor or outdoor walking, review a suggested duration,
+              and start moving without doing the math yourself.
             </p>
           </div>
 
           <div class="media-card">
             <img
               src="assets/watch-walk-plan.png"
-              alt="Nudge walk recommendation showing indoor and outdoor walking options"
+              alt="Nudge Apple Watch showing a practical walk recommendation"
             />
           </div>
         </div>
@@ -1352,60 +1482,97 @@
 
       <section class="section">
         <p class="section-label">
-          Nudge and Apple Workouts
+          Features
         </p>
 
         <h2>
-          Two different tools that work well together
+          Everything you need to stay on track
         </h2>
 
-        <p>
-          Nudge does not replace Apple Workouts. Each app serves a different
-          role in helping you stay active.
-        </p>
+        <ul class="feature-grid">
+          <li>
+            Exact countdown of the steps remaining in your daily goal
+          </li>
 
-        <div class="comparison-grid">
-          <article class="comparison-card">
-            <h3>Apple Workouts</h3>
+          <li>
+            Estimated walking minutes needed to finish
+          </li>
 
-            <p>
-              Records individual walks, runs, hikes, and workouts, including
-              workout duration, heart rate, pace, route, and exercise data.
-            </p>
-          </article>
+          <li>
+            Ahead, behind, and on-pace progress guidance
+          </li>
 
-          <article class="comparison-card highlight">
-            <h3>Nudge</h3>
+          <li>
+            Custom daily goal and Finish By time
+          </li>
 
-            <p>
-              Helps you finish your overall daily step goal by showing
-              remaining steps, estimated walking time, progress guidance,
-              reminders, and practical walk recommendations.
-            </p>
-          </article>
-        </div>
+          <li>
+            Multiple optional Daily Nudge notification times
+          </li>
+
+          <li>
+            Practical walk recommendations based on remaining steps
+          </li>
+
+          <li>
+            Apple Watch complications for progress at a glance
+          </li>
+
+          <li>
+            Daily and weekly step history
+          </li>
+
+          <li>
+            Indoor and outdoor walking options
+          </li>
+
+          <li>
+            Daily goal celebrations
+          </li>
+        </ul>
       </section>
 
       <section class="section">
         <p class="section-label">
-          Apple Health step tracking
+          The Nudge philosophy
         </p>
 
         <h2>
-          Your step data stays connected to Apple Health
+          Consistency matters more than intensity
         </h2>
 
         <p>
-          With your permission, Nudge reads step count data from Apple Health.
-          This allows the app to calculate daily progress, remaining steps,
-          walking-time estimates, historical trends, and personalized
-          recommendations.
+          A lasting fitness habit does not require every day to include a
+          perfect workout. Small amounts of movement, repeated consistently,
+          can make a meaningful difference.
         </p>
 
         <p>
-          Nudge does not replace Apple Health or create a separate step count.
-          It uses the step data already collected by your iPhone and Apple
-          Watch, then presents it as a clearer daily plan.
+          Nudge is designed to make the next small action obvious. It does not
+          ask you to train harder. It helps you keep moving.
+        </p>
+      </section>
+
+      <!-- CONTINUE WITH PART 3 DIRECTLY BELOW THIS LINE -->
+            <section class="section">
+        <p class="section-label">
+          Apple Health integration
+        </p>
+
+        <h2>
+          Nudge turns your Apple Health step data into a daily plan
+        </h2>
+
+        <p>
+          With your permission, Nudge reads step count data from Apple Health
+          to calculate your progress, remaining steps, estimated walking time,
+          historical trends, and walk recommendations.
+        </p>
+
+        <p>
+          Nudge does not create a separate step count. It uses the information
+          already collected by your iPhone and Apple Watch, then presents it in
+          a way that is easier to act on.
         </p>
       </section>
 
@@ -1419,8 +1586,8 @@
         </h2>
 
         <p>
-          Nudge supports a broad range of Apple devices and adapts its layout
-          across Apple Watch display sizes.
+          Nudge supports a broad range of Apple devices and adapts across
+          Apple Watch display sizes.
         </p>
 
         <div class="compatibility-grid">
@@ -1442,40 +1609,17 @@
           </article>
 
           <article class="compatibility-card">
-            <h3>Watch displays</h3>
+            <h3>Watch display sizes</h3>
 
             <p>
-              Layouts are designed to support the full range of Apple Watch
-              display sizes.
+              Layouts are optimized for the full range of supported Apple
+              Watch display sizes.
             </p>
           </article>
         </div>
       </section>
 
       <section class="section">
-        <p class="section-label">
-          The Nudge philosophy
-        </p>
-
-        <h2>
-          Consistency matters more than intensity
-        </h2>
-
-        <p>
-          A healthier routine does not require every day to include a perfect
-          workout. Small amounts of movement, repeated consistently, can
-          become a lasting habit.
-        </p>
-
-        <p>
-          Nudge helps make that habit visible. It gives you a clear next step
-          rather than asking you to exercise harder, train longer, or chase
-          complicated fitness metrics.
-        </p>
-      </section>
-
-      <!-- CONTINUE WITH PART 3 DIRECTLY BELOW THIS LINE -->
-            <section class="section">
         <p class="section-label">
           Frequently asked questions
         </p>
@@ -1489,9 +1633,10 @@
             <h3>What is Nudge?</h3>
 
             <p>
-              Nudge is an Apple Watch and iPhone step goal companion. It turns
-              your remaining daily steps into a clear countdown, walking-time
-              estimate, and practical plan.
+              Nudge is an Apple Watch and iPhone companion that helps you reach
+              your daily step goal. It shows your remaining steps, estimated
+              walking time, pace, reminders, and practical walk
+              recommendations.
             </p>
           </article>
 
@@ -1500,8 +1645,8 @@
 
             <p>
               Nudge uses step data collected through Apple Health rather than
-              creating a separate step count. It then helps you understand your
-              progress, remaining steps, and estimated walking time.
+              creating a separate step count. It then turns that data into a
+              daily plan.
             </p>
           </article>
 
@@ -1516,22 +1661,32 @@
           </article>
 
           <article class="faq-item">
-            <h3>Does Nudge work with Apple Health?</h3>
+            <h3>Can Nudge help me reach 10,000 steps?</h3>
 
             <p>
-              Yes. With your permission, Nudge reads step data from Apple
-              Health to calculate daily progress, remaining steps,
-              walking-time estimates, and coaching guidance.
+              Yes. You can choose a 10,000-step daily goal or set another
+              target that better fits your routine. Nudge shows how many steps
+              and walking minutes remain.
             </p>
           </article>
 
           <article class="faq-item">
-            <h3>Can Nudge help me reach 10,000 steps?</h3>
+            <h3>How can I reach my daily step goal more consistently?</h3>
 
             <p>
-              Yes. You can choose a daily goal of 10,000 steps or set another
-              target that better fits your routine. Nudge shows how many steps
-              and walking minutes remain.
+              Breaking a large goal into smaller walking sessions can make it
+              easier to complete. Nudge helps by showing remaining steps,
+              estimated walking time, and practical walk recommendations
+              throughout the day.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Does Nudge calculate walking time?</h3>
+
+            <p>
+              Yes. Nudge estimates the walking time needed to complete your
+              remaining steps using your selected walking pace.
             </p>
           </article>
 
@@ -1540,8 +1695,8 @@
 
             <p>
               Yes. Nudge includes optional Daily Nudges, progress reminders,
-              walk recommendations, and goal celebrations. You can adjust the
-              available options to fit your day.
+              walk recommendations, and goal celebrations that can be adjusted
+              to fit your routine.
             </p>
           </article>
 
@@ -1550,8 +1705,18 @@
 
             <p>
               Yes. Nudge includes Apple Watch complications that make your
-              daily step progress and remaining steps visible from supported
-              watch faces.
+              remaining steps and daily progress visible from supported watch
+              faces.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Does Nudge work with Apple Health?</h3>
+
+            <p>
+              Yes. With your permission, Nudge reads step data from Apple
+              Health to calculate progress, remaining steps, walking-time
+              estimates, and coaching guidance.
             </p>
           </article>
 
@@ -1569,7 +1734,7 @@
 
             <p>
               Nudge is focused on step progress and daily walking guidance.
-              For more information about how the app handles data, review the
+              For details about how data is handled, review the
               <a href="privacy.html">Nudge Privacy Policy</a>.
             </p>
           </article>
@@ -1578,10 +1743,10 @@
             <h3>How accurate are Nudge step counts?</h3>
 
             <p>
-              Nudge displays step data made available through Apple Health.
-              Results can vary based on which Apple devices you carry or wear,
-              how Apple Health combines data sources, and when step information
-              is refreshed.
+              Nudge displays step data provided by Apple Health. Results can
+              vary based on which Apple devices you carry or wear, how Apple
+              Health combines data sources, and when step information is
+              refreshed.
             </p>
           </article>
         </div>
@@ -1593,12 +1758,12 @@
         </p>
 
         <h2>
-          Ready to reach your daily step goal?
+          Ready to stop guessing and start moving?
         </h2>
 
         <p>
           Download Nudge and turn your remaining steps into a simple,
-          achievable walking plan.
+          achievable plan for the rest of your day.
         </p>
 
         <a
